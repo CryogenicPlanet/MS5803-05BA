@@ -119,7 +119,7 @@ void loop()
   // Pressure and Temperature Calculations
   // 1st order temperature and pressure compensation
   // Difference between actual and reference temperature
-  unsigned long dT = temp - ((Coff[4] * 256));
+  long dT = temp - ((Coff[4] * 256));
   temp = 2000 + (dT * (Coff[5] / pow(2, 23)));
 
   // Offset and Sensitivity calculation 
